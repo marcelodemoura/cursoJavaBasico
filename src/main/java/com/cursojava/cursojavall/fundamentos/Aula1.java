@@ -1,4 +1,4 @@
-package fundamentos;
+package com.cursojava.cursojavall.fundamentos;
 
 public class Aula1 {
 
