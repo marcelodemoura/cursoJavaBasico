@@ -4,7 +4,7 @@ module com.cursojava.cursojavall {
 
 
     opens com.cursojava.cursojavall to javafx.fxml;
-    exports com.cursojava.cursojavall;
+//    exports com.cursojava.cursojavall;
     exports com.cursojava.cursojavall.fundamentos;
     opens com.cursojava.cursojavall.fundamentos to javafx.fxml;
 }
