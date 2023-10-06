@@ -1,4 +1,4 @@
-package com.cursojava.cursojavall.exercicio;
+package com.cursojava.cursojavall.exercicios.fundamentos;
 
 public class AreaCircunferencia {
     public static void main(String[] args) {

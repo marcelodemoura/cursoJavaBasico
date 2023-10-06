@@ -1,4 +1,4 @@
-package com.cursojava.cursojavall.exercicio;
+package com.cursojava.cursojavall.exercicios.fundamentos;
 
 public class Temperatura {
 

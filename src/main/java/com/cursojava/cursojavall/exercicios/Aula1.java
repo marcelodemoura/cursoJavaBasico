@@ -1,4 +1,4 @@
-package com.cursojava.cursojavall.fundamentos;
+package com.cursojava.cursojavall.exercicios;
 
 public class Aula1 {
 
