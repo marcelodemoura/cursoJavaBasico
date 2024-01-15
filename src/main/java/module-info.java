@@ -3,8 +3,10 @@ module com.cursojava.cursojavall {
     requires javafx.fxml;
 
 
-    opens com.cursojava.cursojavall to javafx.fxml;
+    opens com.cursojava.cursojava to javafx.fxml;
 //    exports com.cursojava.cursojavall;
-    exports com.cursojava.cursojavall.exercicios;
-    opens com.cursojava.cursojavall.exercicios to javafx.fxml;
+    exports com.cursojava.cursojava.leonardoLeitao.clinica.exercicios;
+    opens com.cursojava.cursojava.leonardoLeitao.clinica.exercicios to javafx.fxml;
+    exports com.cursojava.cursojava.leonardoLeitao.clinica.exercicios.fundamentos;
+    opens com.cursojava.cursojava.leonardoLeitao.clinica.exercicios.fundamentos to javafx.fxml;
 }

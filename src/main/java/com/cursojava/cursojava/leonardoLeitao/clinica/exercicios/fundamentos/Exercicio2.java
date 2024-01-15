@@ -1,4 +1,4 @@
-package com.cursojava.cursojavall.exercicios;
+package com.cursojava.cursojava.leonardoLeitao.clinica.exercicios.fundamentos;
 
 public class Exercicio2 {
 
@@ -7,11 +7,8 @@ public class Exercicio2 {
   */
     public static void main(String[] args) {
 //        (°F = -32) * 5/9 =°C
-
         final double F = (32);
         final double C = 9.0/5.0;
-
-
 
         double var = 150;
 
@@ -19,11 +16,6 @@ public class Exercicio2 {
         double Gc = (100);
 
         System.out.println((var*C)+F);
-
-
-        System.out.println("");
-
-
     }
 }
 

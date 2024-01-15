@@ -1,4 +1,4 @@
-package com.cursojava.cursojavall.exercicios;
+package com.cursojava.cursojava.leonardoLeitao.clinica.exercicios.fundamentos;
 
 public class Exercicio1 {
 
