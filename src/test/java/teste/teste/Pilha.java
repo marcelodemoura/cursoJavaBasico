@@ -18,7 +18,7 @@ public class Pilha {
     }
 
     public void empilha(Object elemento) {
-        if(quantidade == (elementos.length-3))
+        if(quantidade == elementos.length)
             throw new PilhaCheiaException("Não e possivel empilhar mais elementos");
         this.elementos[quantidade] = elemento;
         quantidade++;
