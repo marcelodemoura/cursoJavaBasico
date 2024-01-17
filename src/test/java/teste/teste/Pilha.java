@@ -1,9 +1,15 @@
 package teste.teste;
 
+import org.junit.jupiter.api.Test;
+
 public class Pilha {
 
-    private Object [] elementos = new Object[10];
+    private Object [] elementos;
     private int quantidade = 0;
+
+    public Pilha(int maximo) {
+        elementos = new Object[maximo];
+    }
 
     public boolean estaVazia() {
         return quantidade == 0;
@@ -20,6 +26,8 @@ public class Pilha {
     }
 
     public Object desmepilha() {
+        if(estaVazia())
+            throw new PilhaVaziaException("Não e possivel desempilhar");
         Object topo = topo();
         quantidade --;
         return topo;
