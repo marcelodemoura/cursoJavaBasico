@@ -5,17 +5,20 @@ import java.util.Map;
 
 public class Tradutor {
 
-    private Map<String, String> traducoes = new HashMap<>();
+    private final Map<String, String> traducoes = new HashMap<>();
 
     public boolean estaVazio() {
         return traducoes.isEmpty();
     }
 
     public void adicionaTraducao(String palavra, String traducao) {
-        this.traducoes.put(palavra, traducao);
+        if(traducoes.containsKey(palavra)){
+            traducao = traduzir(palavra) + "," +traducao;
+        }
+        traducoes.put(palavra, traducao);
     }
 
-    public Object traduzir(String palavra) {
+    public String traduzir(String palavra) {
         return traducoes.get(palavra);
     }
 }

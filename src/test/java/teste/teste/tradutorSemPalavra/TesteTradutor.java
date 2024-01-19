@@ -30,4 +30,10 @@ public class TesteTradutor {
         assertEquals("good", t.traduzir("bom"));
         assertEquals("bad", t.traduzir("mau"));
     }
+    @Test
+    public void duasTraducaoMesmaPalavra() {
+        t.adicionaTraducao("bom", "good");
+        t.adicionaTraducao("bom", "nice");
+        assertEquals("good,nice", t.traduzir("bom"));
+    }
 }
