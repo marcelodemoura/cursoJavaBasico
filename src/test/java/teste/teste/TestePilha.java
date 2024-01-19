@@ -48,7 +48,6 @@ public class TestePilha {
 
         }
     }
-
     @Test
     public void adicionaNaPilhaCheia() {
         for (int i = 0; i < 10; i++) {
