@@ -1,7 +1,9 @@
-package teste.teste;
+package teste.teste.pilha;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import teste.teste.pilha.Pilha;
+import teste.teste.pilha.PilhaCheiaException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,4 +1,4 @@
-package teste.teste;
+package teste.teste.pilha;
 
 public class PilhaCheiaException extends RuntimeException{
 
