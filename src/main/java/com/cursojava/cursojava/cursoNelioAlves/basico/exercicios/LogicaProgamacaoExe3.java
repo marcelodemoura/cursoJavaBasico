@@ -1,4 +1,4 @@
-package com.cursojava.cursojava.cursoNelioAlves.basico;
+package com.cursojava.cursojava.cursoNelioAlves.basico.exercicios;
 
 import java.util.Locale;
 import java.util.Scanner;
