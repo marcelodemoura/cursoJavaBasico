@@ -1,15 +1,17 @@
-package com.projeto.cursoNA.projeto.curso.NA.Model;
+package com.projeto.cursoNA.projeto.curso.NA.Entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@Entity
 public class Categoria {
 
     @Id
-    Integer id;
+    Long id;
     String name;
 
 
