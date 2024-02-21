@@ -1,6 +1,7 @@
 module com.cursojava.cursojavall {
     requires javafx.controls;
     requires javafx.fxml;
+    requires static lombok;
 
 
     opens com.cursojava.cursojava to javafx.fxml;

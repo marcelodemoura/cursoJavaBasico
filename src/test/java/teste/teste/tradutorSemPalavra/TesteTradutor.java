@@ -41,7 +41,7 @@ public class TesteTradutor {
     }
 
     @Test
-    public void traduzirFrase() {
+    public void traduzirFrase( ) {
         t.adicionaTraducao("guerra", "war");
         t.adicionaTraducao("é", "is");
         t.adicionaTraducao("ruim", "bad");

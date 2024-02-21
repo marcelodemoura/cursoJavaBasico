@@ -1,4 +1,4 @@
-package com.cursojava.cursojava.cursoNelioAlves.basico;
+package com.cursojava.cursojava.cursoNelioAlves.basico.exercicios;
 
 public class LogicaProgamacaoExe2 {
     public static void main(String[] args) {
