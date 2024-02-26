@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.awt.print.Pageable;
 
 @RestController
-@RequestMapping("/Usuario")
+@RequestMapping(value = "/Usuario")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;

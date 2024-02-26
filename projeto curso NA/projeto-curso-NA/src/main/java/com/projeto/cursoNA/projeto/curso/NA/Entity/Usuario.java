@@ -1,20 +1,26 @@
 package com.projeto.cursoNA.projeto.curso.NA.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+
+
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @Entity
-public class Usuario {
+public class Usuario implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
-    Long id;
-    String name;
+    private Long id;
+    private String name;
     @Email
-    String email;
-    String celular;
-    String senha;
+    private String email;
+    private String celular;
+    private String senha;
 }
