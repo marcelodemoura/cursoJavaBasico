@@ -2,9 +2,12 @@ package com.projeto.cursoNA.projeto.curso.NA.Controller;
 
 import com.projeto.cursoNA.projeto.curso.NA.Entity.Usuario;
 import com.projeto.cursoNA.projeto.curso.NA.Service.UsuarioService;
+import jakarta.servlet.ServletRequest;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.Optional;
 
@@ -26,15 +29,15 @@ public class UsuarioController {
     public ResponseEntity<Optional<Usuario>> findById(@PathVariable Long id){
         return ResponseEntity.ok(usuarioService.findById(id));
     }
-//    @GetMapping("/{pagina}")
-//    public ResponseEntity<Usuario> page(@RequestBody Usuario usuario, @PathVariable Pageable pageable){
-//        return usuarioService.page(pageable);
+//    @GetMapping("/{todos}")
+//    public ResponseEntity<Usuario> findAll(ServletRequest servletRequest, Pageable pageable){
+//        return ResponseEntity.ok((Usuario) usuarioService.page(pageable));
 //    }
+    @PutMapping("/{Id}")
+    public ResponseEntity<Usuario>update(@RequestBody Usuario usuario) {
+        return ResponseEntity.ok(usuarioService.update(usuario));
+    }
 
-
-//    @PutMapping("/{Id}")
-//    public ResponseEntity<Usuario>atualiza(@RequestBody Usuario usuario,@PathVariable Long Id){
-//        return ResponseEntity.ok(usuarioService.atualiza(usuario));
 
 //    @DeleteMapping("/{Delete}")
 //    ResponseEntity<String> delete(@PathVariable Long id){
