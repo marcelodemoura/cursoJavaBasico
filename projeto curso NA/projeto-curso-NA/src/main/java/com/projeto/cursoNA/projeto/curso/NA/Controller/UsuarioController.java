@@ -22,19 +22,20 @@ public class UsuarioController {
     public ResponseEntity<Usuario>salvar(@RequestBody @Valid Usuario usuario){
         return ResponseEntity.ok().body(usuarioService.salvar(usuario));
     }
-    @GetMapping("/{Id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Optional<Usuario>> findAll(@PathVariable Long id){
         return ResponseEntity.ok(usuarioService.findAll(id));
     }
+//    @GetMapping("/{pagina}")
+//    public ResponseEntity<Usuario> page(@RequestBody Usuario usuario, @PathVariable Pageable pageable){
+//        return usuarioService.page(pageable);
+//    }
 
 
 //    @PutMapping("/{Id}")
 //    public ResponseEntity<Usuario>atualiza(@RequestBody Usuario usuario,@PathVariable Long Id){
 //        return ResponseEntity.ok(usuarioService.atualiza(usuario));
-//    @GetMapping("/{pagina}")
-//    public ResponseEntity<Usuario> page(@RequestBody Usuario usuario, @PathVariable Pageable pageable){
-//        return usuarioService.page(pageable);
-//    }
+
 //    @DeleteMapping("/{Delete}")
 //    ResponseEntity<String> delete(@PathVariable Long id){
 //        return ResponseEntity.status(HttpStatus.OK).body("sucesso");
