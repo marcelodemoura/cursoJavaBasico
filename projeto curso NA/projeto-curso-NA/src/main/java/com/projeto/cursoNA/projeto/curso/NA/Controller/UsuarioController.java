@@ -23,8 +23,8 @@ public class UsuarioController {
         return ResponseEntity.ok().body(usuarioService.salvar(usuario));
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Usuario>> findAll(@PathVariable Long id){
-        return ResponseEntity.ok(usuarioService.findAll(id));
+    public ResponseEntity<Optional<Usuario>> findById(@PathVariable Long id){
+        return ResponseEntity.ok(usuarioService.findById(id));
     }
 //    @GetMapping("/{pagina}")
 //    public ResponseEntity<Usuario> page(@RequestBody Usuario usuario, @PathVariable Pageable pageable){
