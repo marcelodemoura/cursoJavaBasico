@@ -10,23 +10,23 @@ import java.awt.print.Pageable;
 public class UsuarioService {
     private UsuarioService usuarioRepository;
 
-    public Usuario buscarId(Long id) {
-        return usuarioRepository.buscarId(id);
-    }
+//    public Usuario buscarId(Long id) {
+//        return usuarioRepository.buscarId(id);
+//    }
 
     public Usuario salvar(Usuario usuario) {
         return usuarioRepository.salvar(usuario);
     }
 
-    public Usuario atualiza(Usuario usuario) {
-        return usuarioRepository.atualiza(usuario);
-    }
-
-    public ResponseEntity<Usuario> page(Pageable pageable) {
-        return usuarioRepository.page(pageable);
-    }
-
-    public ResponseEntity<Usuario> delete(Long id) {
-        return usuarioRepository.delete(id);
-    }
+//    public Usuario atualiza(Usuario usuario) {
+//        return usuarioRepository.atualiza(usuario);
+//    }
+//
+//    public ResponseEntity<Usuario> page(Pageable pageable) {
+//        return usuarioRepository.page(pageable);
+//    }
+//
+//    public ResponseEntity<Usuario> delete(Long id) {
+//        return usuarioRepository.delete(id);
+//    }
 }
