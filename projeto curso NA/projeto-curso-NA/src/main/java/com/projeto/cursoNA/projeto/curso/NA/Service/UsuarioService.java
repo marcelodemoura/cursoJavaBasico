@@ -1,22 +1,28 @@
 package com.projeto.cursoNA.projeto.curso.NA.Service;
 
 import com.projeto.cursoNA.projeto.curso.NA.Entity.Usuario;
-import org.springframework.http.ResponseEntity;
+import com.projeto.cursoNA.projeto.curso.NA.Repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
-    private UsuarioService usuarioRepository;
+    private UsuarioRepository usuarioRepository;
 
-//    public Usuario buscarId(Long id) {
-//        return usuarioRepository.buscarId(id);
-//    }
+    public UsuarioService(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
+
 
     public Usuario salvar(Usuario usuario) {
-        return usuarioRepository.salvar(usuario);
+        return usuarioRepository.save(usuario);
     }
+
+    public Optional<Usuario> findAll(Long id) {
+        return usuarioRepository.findById(id);
+    }
+
 
 //    public Usuario atualiza(Usuario usuario) {
 //        return usuarioRepository.atualiza(usuario);
