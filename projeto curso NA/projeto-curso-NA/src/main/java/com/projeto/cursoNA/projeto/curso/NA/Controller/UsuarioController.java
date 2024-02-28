@@ -10,8 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -23,24 +21,30 @@ public class UsuarioController {
     public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
+
     @PostMapping
-    public ResponseEntity<Usuario>salvar(@RequestBody @Valid Usuario usuario){
+    public ResponseEntity<Usuario> salvar(@RequestBody @Valid Usuario usuario) {
         return ResponseEntity.ok().body(usuarioService.salvar(usuario));
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Usuario>> findById(@PathVariable Long id){
+    public ResponseEntity<Optional<Usuario>> findById(@PathVariable Long id) {
         return ResponseEntity.ok(usuarioService.findById(id));
     }
+
     @PutMapping("/{Id}")
-    public ResponseEntity<Usuario>update(@RequestBody Usuario usuario) {
+    public ResponseEntity<Usuario> update(@RequestBody Usuario usuario) {
         return ResponseEntity.ok(usuarioService.update(usuario));
     }
+
     @GetMapping
-    public Page<Usuario> page(@PageableDefault (size = 20, page = 0) Pageable pageable){
+    public Page<Usuario> page(@PageableDefault(size = 20, page = 0) Pageable pageable) {
         return usuarioService.page(pageable);
     }
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<Usuario> delete(@PathVariable Long id){
-//        return ResponseEntity.ok(usuarioService.delete(id);
-//    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id) {
+        usuarioService.delete(id);
+        return ResponseEntity.status(HttpStatus.OK).body("Deletado com sucesso ");
+    }
 }

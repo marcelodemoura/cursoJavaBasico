@@ -7,7 +7,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-
 import java.util.Optional;
 
 @Service
@@ -17,20 +16,24 @@ public class UsuarioService {
     public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
+
     public Usuario salvar(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
+
     public Optional<Usuario> findById(Long id) {
         return usuarioRepository.findById(id);
     }
-    public Usuario update(Usuario usuario) {return usuarioRepository.save(usuario);}
+
+    public Usuario update(Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
 
     public Page<Usuario> page(Pageable pageable) {
         return usuarioRepository.findAll(pageable);
     }
 
 
-//    public void delete(Long id){
-//        usuarioRepository.delete(id);
-//    }
+    public void delete(Long id) {
+    }
 }
