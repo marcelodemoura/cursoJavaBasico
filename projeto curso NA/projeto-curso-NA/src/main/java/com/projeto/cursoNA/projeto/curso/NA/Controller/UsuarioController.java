@@ -2,13 +2,16 @@ package com.projeto.cursoNA.projeto.curso.NA.Controller;
 
 import com.projeto.cursoNA.projeto.curso.NA.Entity.Usuario;
 import com.projeto.cursoNA.projeto.curso.NA.Service.UsuarioService;
-import jakarta.servlet.ServletRequest;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -20,7 +23,6 @@ public class UsuarioController {
     public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
-
     @PostMapping
     public ResponseEntity<Usuario>salvar(@RequestBody @Valid Usuario usuario){
         return ResponseEntity.ok().body(usuarioService.salvar(usuario));
@@ -29,19 +31,16 @@ public class UsuarioController {
     public ResponseEntity<Optional<Usuario>> findById(@PathVariable Long id){
         return ResponseEntity.ok(usuarioService.findById(id));
     }
-//    @GetMapping("/{todos}")
-//    public ResponseEntity<Usuario> findAll(ServletRequest servletRequest, Pageable pageable){
-//        return ResponseEntity.ok((Usuario) usuarioService.page(pageable));
-//    }
     @PutMapping("/{Id}")
     public ResponseEntity<Usuario>update(@RequestBody Usuario usuario) {
         return ResponseEntity.ok(usuarioService.update(usuario));
     }
-
-
-//    @DeleteMapping("/{Delete}")
-//    ResponseEntity<String> delete(@PathVariable Long id){
-//        return ResponseEntity.status(HttpStatus.OK).body("sucesso");
+    @GetMapping
+    public Page<Usuario> page(@PageableDefault (size = 20, page = 0) Pageable pageable){
+        return usuarioService.page(pageable);
+    }
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Usuario> delete(@PathVariable Long id){
+//        return ResponseEntity.ok(usuarioService.delete(id);
 //    }
-
 }
