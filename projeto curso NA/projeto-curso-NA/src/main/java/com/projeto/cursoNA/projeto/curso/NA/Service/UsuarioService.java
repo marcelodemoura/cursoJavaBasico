@@ -23,13 +23,14 @@ public class UsuarioService {
     public Optional<Usuario> findById(Long id) {
         return usuarioRepository.findById(id);
     }
-//    public Page<Usuario> page(Pageable pageable) {
-//        return (Page<Usuario>) usuarioRepository.page(pageable);
-//    }
-    public Usuario update(Usuario usuario) {
-        return usuarioRepository.save(usuario);
+    public Usuario update(Usuario usuario) {return usuarioRepository.save(usuario);}
+
+    public Page<Usuario> page(Pageable pageable) {
+        return usuarioRepository.findAll(pageable);
     }
-//    public ResponseEntity<Usuario> delete(Long id) {
-//        return usuarioRepository.delete(id);
+
+
+//    public void delete(Long id){
+//        usuarioRepository.delete(id);
 //    }
 }
