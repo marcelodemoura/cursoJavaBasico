@@ -1,6 +1,7 @@
 package com.projeto.cursoNA.projeto.curso.NA.Controller;
 
 import com.projeto.cursoNA.projeto.curso.NA.Entity.Produto;
+import com.projeto.cursoNA.projeto.curso.NA.Entity.Usuario;
 import com.projeto.cursoNA.projeto.curso.NA.Service.ProdutoService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -31,6 +33,10 @@ public class ProdutoController {
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Produto>> findById(@PathVariable Long id) {
         return ResponseEntity.ok(produtoService.findById(id));
+    }
+    @GetMapping("/{todos}")
+    public ResponseEntity<List<Produto>> todos(@RequestBody Usuario usuario) {
+        return ResponseEntity.ok(produtoService.findAll(usuario));
     }
 
     @PutMapping("/{Id}")
