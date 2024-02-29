@@ -5,11 +5,14 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
-@Entity
 
-public class Produto {
+@Entity
+public class Produto implements Serializable {
+    private final long serialVersionUID = 1L;
 
 
     @Id
