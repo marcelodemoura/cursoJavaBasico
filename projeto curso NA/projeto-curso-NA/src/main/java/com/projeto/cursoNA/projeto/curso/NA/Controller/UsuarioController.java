@@ -32,15 +32,15 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.findById(id));
     }
 
+    @GetMapping
+    public Page<Usuario> page(@PageableDefault(size = 20, page = 0) Pageable pageable) {
+        return usuarioService.page(pageable);
+    }
     @PutMapping("/{Id}")
     public ResponseEntity<Usuario> update(@RequestBody Usuario usuario) {
         return ResponseEntity.ok(usuarioService.update(usuario));
     }
 
-    @GetMapping
-    public Page<Usuario> page(@PageableDefault(size = 20, page = 0) Pageable pageable) {
-        return usuarioService.page(pageable);
-    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
