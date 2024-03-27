@@ -4,16 +4,16 @@ import jakarta.persistence.Entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+
 @NoArgsConstructor
 @Entity
-public class OrdemStatus {
+public enum OrdemStatus {
 
-    int esperandoPagamento;
-    int pago;
-    int enviado;
-    int devolvido;
-    int cancelado;
+    esperandoPagamento,
+    pago,
+    enviado,
+    devolvido,
+    cancelado;
 
 
 }

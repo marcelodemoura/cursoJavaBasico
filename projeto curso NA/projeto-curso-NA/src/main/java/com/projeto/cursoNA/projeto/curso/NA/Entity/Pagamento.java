@@ -14,5 +14,5 @@ public class Pagamento {
 
     @Id
     Long Id;
-    Date monemto;
+    Date momento;
 }
