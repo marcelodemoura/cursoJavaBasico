@@ -4,7 +4,9 @@ import com.projeto.cursoNA.projeto.curso.NA.Entity.Pagamento;
 import com.projeto.cursoNA.projeto.curso.NA.Repository.PagamentoRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PagamentoService {
 
     private final PagamentoRepository pagamentoRepository;

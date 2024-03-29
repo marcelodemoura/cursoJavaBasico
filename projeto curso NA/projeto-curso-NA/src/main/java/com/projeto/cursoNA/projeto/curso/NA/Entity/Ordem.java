@@ -13,10 +13,8 @@ import java.util.Date;
 public class Ordem {
 
 
-
-
     @Id
-   private Long Id;
+    private Long Id;
     private Date momento;
     private OrdemStatus ordemStatus;
 

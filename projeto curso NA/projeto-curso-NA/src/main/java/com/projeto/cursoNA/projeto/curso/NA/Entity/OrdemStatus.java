@@ -5,8 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@NoArgsConstructor
-@Entity
+
 public enum OrdemStatus {
 
     esperandoPagamento,
