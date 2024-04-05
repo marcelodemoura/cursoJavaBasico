@@ -10,5 +10,10 @@
         <module name="projeto-curso-NA.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="projeto-curso-NA" target="17" />
+      <module name="projeto-curso-NA.main" target="17" />
+      <module name="projeto-curso-NA.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
