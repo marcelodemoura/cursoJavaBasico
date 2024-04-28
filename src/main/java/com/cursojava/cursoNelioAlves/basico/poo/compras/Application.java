@@ -1,6 +1,6 @@
-package com.cursojava.cursoNelioAlves.basico.compras;
+package com.cursojava.cursoNelioAlves.basico.poo.compras;
 
-import com.cursojava.cursoNelioAlves.basico.entities.Product;
+import com.cursojava.cursoNelioAlves.basico.poo.entities.Product;
 
 import java.util.Locale;
 import java.util.Scanner;

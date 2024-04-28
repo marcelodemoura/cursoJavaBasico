@@ -1,4 +1,4 @@
-package com.cursojava.cursoNelioAlves.basico.entities;
+package com.cursojava.cursoNelioAlves.basico.poo.entities;
 
 public class Product {
 

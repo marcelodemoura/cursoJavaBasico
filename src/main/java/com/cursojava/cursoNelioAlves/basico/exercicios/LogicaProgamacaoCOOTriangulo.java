@@ -4,7 +4,7 @@ import com.cursojava.cursoNelioAlves.basico.entities.Triangulo;
 
 import java.util.Scanner;
 
-public class LogicaProgamacaoCOO {
+public class LogicaProgamacaoCOOTriangulo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
