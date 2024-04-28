@@ -1,4 +1,4 @@
-package com.cursojava.cursojava.cursoNelioAlves.basico.construtores;
+package com.cursojava.cursoNelioAlves.basico.exercicios;
 
 public class Product {
 

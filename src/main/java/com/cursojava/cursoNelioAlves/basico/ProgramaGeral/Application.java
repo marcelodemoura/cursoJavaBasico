@@ -1,4 +1,4 @@
-package com.cursojava.cursoNelioAlves.basico.compras;
+package com.cursojava.cursoNelioAlves.basico.ProgramaGeral;
 
 import com.cursojava.cursoNelioAlves.basico.entities.Product;
 
